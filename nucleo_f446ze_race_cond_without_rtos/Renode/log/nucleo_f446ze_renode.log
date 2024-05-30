@@ -1,0 +1,24 @@
+16:30:52.0541 [INFO] System bus created.
+16:30:53.3750 [INFO] sysbus: Loaded SVD: /tmp/renode-222436/8e367356-381e-47a6-8480-205ae39f810e.tmp. Name: STM32F40x. Description: STM32F40x.
+16:30:53.4929 [INFO] sysbus: Loading segment of 11216 bytes length at 0x8000000.
+16:30:53.5098 [INFO] sysbus: Loading segment of 200 bytes length at 0x8002BD0.
+16:30:53.5099 [INFO] sysbus: Loading segment of 1536 bytes length at 0x8002BDC.
+16:30:53.5817 [INFO] nucleo_f446ze: GDB server with all CPUs started on port :1234
+16:30:53.5853 [INFO] sysbus: Loading segment of 11216 bytes length at 0x8000000.
+16:30:53.5855 [INFO] sysbus: Loading segment of 200 bytes length at 0x8002BD0.
+16:30:53.5855 [INFO] sysbus: Loading segment of 1536 bytes length at 0x8002BDC.
+16:30:53.6530 [INFO] cpu: Guessing VectorTableOffset value to be 0x8000000.
+16:30:53.6590 [INFO] cpu: Setting initial values: PC = 0x8000A3D, SP = 0x20020000.
+16:30:53.6605 [INFO] nucleo_f446ze: Machine started.
+16:30:56.2303 [WARNING] flash_controller: Unhandled write to offset 0x0. Unhandled bits: [9] when writing value 0x200. Tags: ICEN (0x1).
+16:30:56.2321 [WARNING] flash_controller: Unhandled write to offset 0x0. Unhandled bits: [10] when writing value 0x400. Tags: DCEN (0x1).
+16:30:56.2322 [WARNING] flash_controller: Unhandled write to offset 0x0. Unhandled bits: [8] when writing value 0x100. Tags: PRFTEN (0x1).
+16:30:56.2402 [WARNING] rcc: Unhandled write to offset 0x0. Unhandled bits: [18] when writing value 0x40483. Tags: HSEBYP (0x1).
+16:30:56.2512 [WARNING] sysbus: Read from an unimplemented register SYSCFG:EXTICR4 (0x40013814), returning a value from SVD: 0x0.
+16:30:56.2521 [WARNING] sysbus: Write of value 0x20 to an unimplemented register SYSCFG:EXTICR4 (0x40013814) generated from SVD.
+16:30:56.2571 [WARNING] usart3: Unhandled read from offset 0x14.
+16:30:56.2574 [WARNING] usart3: Unhandled write to offset 0x14, value 0x0.
+16:30:56.2575 [WARNING] usart3: Unhandled read from offset 0x14.
+16:30:56.2576 [WARNING] usart3: Unhandled write to offset 0x14, value 0x0.
+16:31:25.4216 [INFO] nucleo_f446ze: Machine paused.
+16:31:25.4664 [INFO] nucleo_f446ze: Disposed.
