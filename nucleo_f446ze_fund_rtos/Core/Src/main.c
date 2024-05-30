@@ -21,11 +21,15 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
 
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+
+#define INITIALIZE_MESSAGE_1    "\r\n*********************************************************\r\n"
+#define INITIALIZE_MESSAGE_2    "                    Fundamentos de RTOS \r\n\n"
 
 /* USER CODE END PTD */
 
@@ -56,6 +60,13 @@ static void MX_USART3_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+// Redirect printf to USART 3
+int __io_putchar(int ch)
+{
+  HAL_UART_Transmit(&huart3, (uint8_t*)&ch, 1, 10);
+  return ch;
+}
 
 /* USER CODE END 0 */
 
@@ -178,6 +189,9 @@ static void MX_USART3_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART3_Init 2 */
+
+  printf(INITIALIZE_MESSAGE_1);
+  printf(INITIALIZE_MESSAGE_2);
 
   /* USER CODE END USART3_Init 2 */
 
