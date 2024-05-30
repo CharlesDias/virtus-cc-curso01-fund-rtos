@@ -1,0 +1,26 @@
+logFile $ORIGIN/log/nucleo_f446ze_renode.log True
+
+using sysbus
+$name?="nucleo_f446ze"
+mach create $name
+
+:machine LoadPlatformDescription $ORIGIN/nucleo_f446ze.repl
+machine LoadPlatformDescription @platforms/boards/stm32f4_discovery-kit.repl
+
+showAnalyzer usart3
+usart3 RecordToAsciinema $ORIGIN/log/nucleo_f446ze-asciinema
+
+sysbus LoadELF @./Debug/nucleo_f446ze_hello.elf
+machine StartGdbServer  1234 True
+
+macro reset
+"""
+    sysbus LoadELF @./Debug/nucleo_f446ze_hello.elf
+    :The g_pfnVectors is used only for STM32CubeIDE project
+    cpu VectorTableOffset `sysbus GetSymbolAddress "g_pfnVectors"`
+    : The command below is probably used with Zephyr RTOS
+    :cpu0 VectorTableOffset `sysbus GetSymbolAddress "_vector_table"`
+    :cpu0 EnableProfilerCollapsedStack $ORIGIN/log/nucleo_f446ze_profile true
+"""
+
+runMacro $reset
