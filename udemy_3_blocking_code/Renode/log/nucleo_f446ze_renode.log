@@ -1,0 +1,23 @@
+17:29:37.8579 [INFO] System bus created.
+17:29:39.0848 [INFO] sysbus: Loaded SVD: /tmp/renode-255465/4f693e64-f76b-4b7e-98b1-8aa591382505.tmp. Name: STM32F40x. Description: STM32F40x.
+17:29:39.2014 [INFO] sysbus: Loading segment of 11884 bytes length at 0x8000000.
+17:29:39.2150 [INFO] sysbus: Loading segment of 544 bytes length at 0x8002E6C.
+17:29:39.2151 [INFO] sysbus: Loading segment of 1536 bytes length at 0x8002ED4.
+17:29:39.2809 [INFO] nucleo_f446ze: GDB server with all CPUs started on port :1234
+17:29:39.2907 [INFO] sysbus: Loading segment of 11884 bytes length at 0x8000000.
+17:29:39.2909 [INFO] sysbus: Loading segment of 544 bytes length at 0x8002E6C.
+17:29:39.2910 [INFO] sysbus: Loading segment of 1536 bytes length at 0x8002ED4.
+17:29:57.8077 [INFO] cpu: Setting initial values: PC = 0x8000A21, SP = 0x20020000.
+17:29:57.8088 [INFO] nucleo_f446ze: Machine started.
+17:30:02.9375 [WARNING] flash_controller: Unhandled write to offset 0x0. Unhandled bits: [9] when writing value 0x200. Tags: ICEN (0x1).
+17:30:02.9406 [WARNING] flash_controller: Unhandled write to offset 0x0. Unhandled bits: [10] when writing value 0x400. Tags: DCEN (0x1).
+17:30:02.9408 [WARNING] flash_controller: Unhandled write to offset 0x0. Unhandled bits: [8] when writing value 0x100. Tags: PRFTEN (0x1).
+17:30:02.9527 [WARNING] rcc: Unhandled write to offset 0x0. Unhandled bits: [18] when writing value 0x40483. Tags: HSEBYP (0x1).
+17:30:02.9653 [WARNING] sysbus: Read from an unimplemented register SYSCFG:EXTICR4 (0x40013814), returning a value from SVD: 0x0.
+17:30:02.9665 [WARNING] sysbus: Write of value 0x20 to an unimplemented register SYSCFG:EXTICR4 (0x40013814) generated from SVD.
+17:30:02.9724 [WARNING] usart3: Unhandled read from offset 0x14.
+17:30:02.9725 [WARNING] usart3: Unhandled write to offset 0x14, value 0x0.
+17:30:02.9729 [WARNING] usart3: Unhandled read from offset 0x14.
+17:30:02.9730 [WARNING] usart3: Unhandled write to offset 0x14, value 0x0.
+17:30:10.1843 [INFO] nucleo_f446ze: Machine paused.
+17:30:10.2972 [INFO] nucleo_f446ze: Disposed.
